@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zenetive - Projects & Services</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="logo.jpg" type="image/x-icon">
+    <style>
+        /* Projects Section */
+        #projects {
+            padding: 80px 20px;
+        }
+
+        .project-card {
+            background: var(--white);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            margin-bottom: 30px;
+            transition: transform 0.3s;
+            border: 1px solid var(--grey);
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--primary);
+        }
+
+        .project-card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+
+        .project-card .p-4 {
+            background: #fff;
+        }
+
+        /* Service Plans */
+        .plan-card {
+            background: var(--secondary);
+            color: var(--white);
+            padding: 40px;
+            border-radius: 20px;
+            text-align: center;
+            transition: all 0.3s;
+            border: 2px solid transparent;
+        }
+
+        .plan-card:hover {
+            border-color: var(--primary);
+            transform: scale(1.05);
+        }
+
+        .plan-card h3 {
+            color: var(--primary);
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .plan-card .price {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .plan-card ul {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 30px;
+            text-align: left;
+        }
+
+        .plan-card ul li {
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .plan-card ul li::before {
+            content: "✓";
+            color: var(--primary);
+            font-weight: 700;
+        }
+    </style>
+</head>
+
+<body class="speedyui">
+
+    <!--=============== Start Header Section  ===============-->
+    <header class="speedyui-header sticky-top bg-white shadow-sm">
+        <nav class="navbar navbar-expand-lg py-3 py-lg-0">
+            <div class="container">
+                <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+                    <img src="logo.jpg" alt="Zenetive Logo" style="height: 50px; border-radius: 5px;">
+                    <span class="fw-bold fs-4 text-dark" style="font-family: 'Playfair Display', serif;">Zenetive</span>
+                </a>
+                <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse py-3 py-lg-0 bg-white px-4 px-lg-0" id="navbarNavDropdown">
+                    <ul class="navbar-nav align-items-start align-items-lg-center ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item py-2 py-lg-4">
+                            <a class="nav-link px-lg-4 py-0" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item py-2 py-lg-4">
+                            <a class="nav-link px-lg-4 py-0" href="about.html">About</a>
+                        </li>
+                        <li class="nav-item py-2 py-lg-4">
+                            <a class="nav-link px-lg-4 py-0" href="domains.html">Domains</a>
+                        </li>
+                        <li class="nav-item dropdown px-lg-4 py-0">
+                            <a class="nav-link d-flex align-items-center justify-content-lg-center gap-2 dropdown-toggle px-0 py-2 py-lg-4"
+                                href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Programs
+                                <span class="mb-1">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor"
+                                        class="bi bi-chevron-down" viewBox="0 0 16 16">
+                                        <path stroke="currentColor" stroke-width="1.2" fill-rule="evenodd"
+                                            d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z">
+                                        </path>
+                                    </svg>
+                                </span>
+                            </a>
+                            <ul class="dropdown-menu border-0 start-0">
+                                <li><a class="dropdown-item py-2" href="roadmap.html">Roadmap</a></li>
+                                <li><a class="dropdown-item py-2" href="projects.html">Projects</a></li>
+                                <li><a class="dropdown-item py-2" href="projects.html">Services</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item py-2 py-lg-4">
+                            <a class="nav-link px-lg-4 py-0" href="contact.html">Contact</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="contact.html"
+                                class="btn primary-btn text-white border-0 px-4 py-2 mt-2 mt-lg-0 rounded-pill">book a
+                                Consultancy</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!--=============== End Header Section  ===============-->
+
+    <section id="projects">
+    <div class="container">
+        <h2 class="text-center mb-5 reveal">Our Projects</h2>
+        <div class="row">
+
+            <!-- Luxora Studio -->
+            <div class="col-lg-4 reveal">
+                <a href="https://luxora-studio.vercel.app/" target="_blank" style="text-decoration: none; color: inherit;">
+                    <div class="project-card">
+                        <img src="luxora.png" alt="Luxora Studio">
+                        <div class="p-4">
+                            <h3>Luxora Studio</h3>
+                            <p>Luxora Studio is a modern interior design website developed by Zenetive Infotech, showcasing elegant design, seamless navigation, and a premium digital experience that highlights creativity, aesthetics, and professional brand presentation.</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <!-- The Matrix -->
+            <div class="col-lg-4 reveal">
+                <a href="https://the-matrix-exam-hall-allocation-por.vercel.app/" target="_blank" style="text-decoration: none; color: inherit;">
+                    <div class="project-card">
+                        <img src="matrix.png" alt="The Matrix">
+                        <div class="p-4">
+                            <h3>The Matrix</h3>
+                            <p>The Matrix is an AI-driven exam hall allocation system developed by Zenetive, designed to automate seating, reduce manual errors, optimize space usage, and ensure efficient, fair, and accurate examination management.</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Zenetive Solutions (unchanged) -->
+            <div class="col-lg-4 reveal">
+                <div class="project-card">
+                    <img src="pexels-pixabay-356056.jpg" alt="Zenetive Solutions">
+                    <div class="p-4">
+                        <h3>Zenetive Solutions</h3>
+                        <p>Zenetive Solutions delivers innovative IT consulting and digital solutions, combining technology, strategy, and execution to help businesses scale efficiently while empowering talent through practical, industry-focused learning programs.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <h2 class="text-center my-5 reveal">Service Plans</h2>
+        <div class="row justify-content-center">
+            <div class="col-lg-4 reveal">
+                <div class="plan-card">
+                    <h3>IT Consultant & Service</h3>
+
+                    <ul>
+                        <li>Website designing</li>
+                        <li>Digital Marketing</li>
+                        <li>Graphic Designing</li>
+                        <li>SEO Optimization</li>
+                        <li>Consulting Service</li>
+                        <li>Client Satisfaction</li>
+                    </ul>
+                    <a href="contact.html" class="btn primary-btn rounded-pill"
+                        style="background-color: var(--primary); color: var(--secondary);">
+                        Book a Consultancy
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-lg-4 reveal">
+                <div class="plan-card" style="border-color: var(--primary);">
+                    <h3>Internships</h3>
+                    <ul>
+                        <li>Hands-on Projects</li>
+                        <li>Government Certified</li>
+                        <li>Stipend (BOP)</li>
+                        <li>15 + Domains</li>
+                        <li>Completion Certifications</li>
+                        <li>Curated Resources</li>
+                    </ul>
+                    <a href="domains.html" class="btn primary-btn rounded-pill"
+                        style="background-color: var(--primary); color: var(--secondary);">
+                        Apply Now
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    <footer>
+        <p>© 2025 Zenetive. All rights reserved.</p>
+        <div class="social-icons">
+            <a href="https://www.linkedin.com/company/zenetiveindia/">LinkedIn</a>
+            <a href="https://www.instagram.com/zenetive.india?igsh=cXo1NXp3ODJmZGVv">Instagram</a>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/919042427828" class="whatsapp-btn" target="_blank" title="Chat with us on WhatsApp">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="35" height="35" fill="white">
+            <path
+                d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7 .9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z">
+            </path>
+        </svg>
+    </a>
+
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const revealOnScroll = () => {
+            const revealElements = document.querySelectorAll('.reveal');
+            const triggerBottom = window.innerHeight * 0.85;
+            revealElements.forEach(el => {
+                const elTop = el.getBoundingClientRect().top;
+                if (elTop < triggerBottom) {
+                    el.style.opacity = 1;
+                    el.style.transform = 'translateY(0)';
+                }
+            });
+        };
+        window.addEventListener('scroll', revealOnScroll);
+        window.addEventListener('load', revealOnScroll);
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', (e) => {
+            const navbarCollapse = document.getElementById('navbarNavDropdown');
+            const navbarToggler = document.querySelector('.navbar-toggler');
+            if (navbarCollapse && navbarCollapse.classList.contains('show') && !navbarCollapse.contains(e.target) && !navbarToggler.contains(e.target)) {
+                const bsCollapse = new bootstrap.Collapse(navbarCollapse);
+                bsCollapse.hide();
+            }
+        });
+    </script>
+</body>
+
+</html>

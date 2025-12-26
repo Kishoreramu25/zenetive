@@ -1,0 +1,198 @@
+:root {
+    --primary: #D4AF37;
+    /* Royal Gold */
+    --secondary: #0B1C2D;
+    /* Navy Blue */
+    --white: #FAF9F6;
+    /* Ivory */
+    --black: #2C2C2C;
+    /* Charcoal */
+    --grey: #E5E7EB;
+    /* Soft Grey */
+    --su-primary-color: #D4AF37;
+    --su-secondary-color: #0B1C2D;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: var(--white);
+    color: var(--black);
+    scroll-behavior: smooth;
+    line-height: 1.6;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    color: var(--secondary);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* SpeedyUI Header Styles */
+.speedyui {
+    font-family: "Inter", sans-serif;
+}
+
+.speedyui-header .navbar-brand img {
+    height: 50px;
+    border-radius: 5px;
+}
+
+.speedyui-header .nav-link {
+    color: var(--black);
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.speedyui-header .nav-link:hover {
+    color: var(--su-primary-color);
+}
+
+@media (min-width: 992px) {
+    .speedyui-header .dropdown:hover .dropdown-menu {
+        display: block;
+        opacity: 1;
+        margin-top: 0.125rem;
+    }
+}
+
+.speedyui-header .dropdown .dropdown-menu {
+    margin-top: 0.125rem;
+    transition: all 0.3s ease-in-out;
+    border: none;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    background-color: var(--white);
+}
+
+.speedyui-header .primary-btn {
+    background-color: var(--su-secondary-color);
+    color: var(--white) !important;
+    transition: background-color 0.3s;
+    font-weight: 600;
+}
+
+.speedyui-header .primary-btn:hover {
+    background-color: var(--su-primary-color);
+    color: var(--secondary) !important;
+}
+
+/* Hero Section */
+#hero {
+    padding: 100px 20px;
+    background: var(--white);
+}
+
+#hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+}
+
+#hero p {
+    font-size: 1.2rem;
+    color: var(--black);
+    margin-bottom: 30px;
+}
+
+.primary-btn {
+    background-color: var(--secondary);
+    color: var(--white);
+    padding: 12px 30px;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+
+.primary-btn:hover {
+    background-color: var(--primary);
+    color: var(--secondary);
+    transform: translateY(-2px);
+}
+
+/* Footer */
+footer {
+    background: var(--secondary);
+    color: var(--white);
+    padding: 40px 20px;
+    text-align: center;
+}
+
+footer .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+footer .social-icons a {
+    color: var(--white);
+    transition: color 0.3s;
+}
+
+footer .social-icons a:hover {
+    color: var(--primary);
+}
+
+/* WhatsApp Button */
+.whatsapp-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25d366;
+    color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    transition: transform 0.3s ease;
+}
+
+.whatsapp-btn:hover {
+    transform: scale(1.1);
+}
+
+.whatsapp-btn svg {
+    width: 35px;
+    height: 35px;
+    fill: white;
+}
+
+.reveal {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.8s ease;
+}
+
+/* Custom styles for other pages */
+.section-padding {
+    padding: 80px 0;
+}
+
+.card {
+    transition: transform 0.3s, box-shadow 0.3s;
+    border: none;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
